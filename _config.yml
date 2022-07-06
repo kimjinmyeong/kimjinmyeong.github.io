@@ -23,13 +23,14 @@ timezone: Asia/Seoul
 
 title: Study space                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: about computer science   # it will display as the sub-title
 
-description: >-                        # used by seo meta and the atom feed
+description: >-
+ majoring in software at Kookmin University in Seoul,Republic of Korea # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://kimjinmyeong.github.io'
 
 github:
   username: kimjinmyeong             # change to your github username
