@@ -1,0 +1,25 @@
+@media (min-width: 980px) {
+    .toTop {
+        padding-top: 24px;
+        text-align: center;
+        position: fixed;
+        left: 0;
+        height: 100%;
+        width: 24px;
+        background-color: transparent;
+        z-index: 1000;
+        transition: 0.5s background-color ease;
+    }
+    .toTop:hover {
+        background-color: #d4d4d4;
+        transition: 0.5s background-color ease;
+        cursor: pointer;
+    }
+    .fa-angle-up {
+        position: relative;
+    }
+}
+
+.toTop {
+    display:none;
+}
