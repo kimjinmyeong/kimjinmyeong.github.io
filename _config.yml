@@ -8,11 +8,19 @@ url: "https://kimjinmyeong.github.io" # the base hostname & protocol for your si
 author:
   name: 'JinMyeong'
   last_name: 'Kim'
+<<<<<<< HEAD
   cv: ''
   avatar: '/images/avatar.jpeg'
   github_username:  kimjinmyeong
   email: kjmdkdlel@gmail.com
   vk_id: 
+=======
+  cv: '//kaptn.ru'
+  avatar: '/images/avatar.jpeg'
+  github_username:  kimjinmyeong
+  email: kjmdkdlel@gmail.com
+  vk_id: id201664979
+>>>>>>> origin/main
   telegram_name: 
   logo: '/images/logo.svg'
 
