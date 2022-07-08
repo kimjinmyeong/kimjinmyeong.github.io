@@ -21,3 +21,4 @@ markdown: kramdown
 
 permalink: /:categories/:year/:title.html
 
+timezone: Asia/Seoul
