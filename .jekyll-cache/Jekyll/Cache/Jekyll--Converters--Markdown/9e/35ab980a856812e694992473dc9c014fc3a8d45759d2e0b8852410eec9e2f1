@@ -76,7 +76,7 @@ permalink: /category1/
 
  &lt;!-- category - переменная из адреса сайта --&gt;
     &lt;header&gt;
-        &lt;h1 class="cat-header" style="text-align: center;"&gt;category22022readme.html&lt;/h1&gt;
+        &lt;h1 class="cat-header" style="text-align: center;"&gt;category22022Readme.html&lt;/h1&gt;
     &lt;/header&gt;
 
     &lt;style&gt;
@@ -124,7 +124,7 @@ For example, we write post of category_name’s category. In folder <code class=
 <p>Also, in front matter you can control the announcement of record post. By default, the announcement consists of 35 words. Writing in the front matter called “preview” the number 0, the announcement will not be displayed for this entry. <a href="https://github.com/ViKapitoshka/blog/blob/master/_posts/2017-06-08-learn-git4.md">Example</a>.</p>
 
 <h3 id="edit-link">Edit link</h3>
-<p>All posts can be edited by users through link: <code class="language-plaintext highlighter-rouge">github.com/vikapitoshka/blog/edit/master/_posts/2022-07-09-readme.md</code> or <code class="language-plaintext highlighter-rouge">github.com/vikapitoshka/blog/edit/master/</code>.</p>
+<p>All posts can be edited by users through link: <code class="language-plaintext highlighter-rouge">github.com/vikapitoshka/blog/edit/master/_posts/2022-07-09-Readme.md</code> or <code class="language-plaintext highlighter-rouge">github.com/vikapitoshka/blog/edit/master/</code>.</p>
 
 <h3 id="web-analytics">Web analytics</h3>
 <p>I use <a href="https://metrika.yandex.ru">Yandex Metrika</a> to do web analytics, you can choose either to realize it, just paste your code in <code class="language-plaintext highlighter-rouge">includes/analytics.html</code>.</p>
