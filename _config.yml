@@ -1,6 +1,9 @@
 title: Study Space
 description: > # this means to ignore newlines until "baseurl:"
- Male  99.04.19  majoring in software at Kookmin University in Seoul  ISFJ  
+ Male<br/>
+ 99.04.19<br/>
+ majoring in software at Kookmin University in Seoul<br/>
+ ISFJ
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kimjinmyeong.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
