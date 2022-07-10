@@ -4,3 +4,6 @@
 
 - name: category2
   href: '/category2/'
+
+- name: computerscience
+  href: '/computerscience/'
