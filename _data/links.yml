@@ -1,9 +1,3 @@
 # blog page sections
-- name: category1
-  href: '/category1/'
-
-- name: category2
-  href: '/category2/'
-
 - name: computerscience
   href: '/computerscience/'
