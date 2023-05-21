@@ -1,128 +1,98 @@
-# AP  [![Build Status](https://travis-ci.org/kssim/ap.svg?branch=master)](https://travis-ci.org/kssim/ap.svg?branch=master)
-"AP" is [Jekyll](https://jekyllrb.com/) theme for career. This theme is free and open-source.  
-Based on Chester How's tale-theme(https://github.com/chesterhow/tale) with a few new features:  
-* SNS Link
-* Google Analytics
-* Responsive design
-* Upgrading awesome fonts and modifying some layouts.
-* Use "About" as main.
-  * It can be written in simple resume form.
-* Change "Post" to "Project Portfolio"
-  * You can manage your project experience just like running a blog.
+## Phantom for Jekyll
 
+A minimalist, responsive portfolio theme for [Jekyll](http://jekyllrb.com/) with Bootstrap.
 
-# Preview
-[![AP Screenshot](https://github.com/kssim/ap/blob/master/screenshot.png?raw=true)](https://kssim.github.io/ap/)
+![preview](preview.jpg)
 
+[See it in action](http://jamigibbs.github.io/phantom/).
 
-# Usage
-1. Fork and clone the AP repo:
-    * git clone https://github.com/kssim/ap.git
-2. Install Jekyll:
-    * gem install jekyll
-3. Install the theme's dependencies
-    * bundle install
-4. Customize the theme
-    * update _config.yml
-5. Run the Jekyll server
-    * jekyll serve
+## Fancy using it for your own site?
 
+Here are some steps to get you started:
 
-## Structure
-* Here are the main files of the template
-```bash
-ap
-├── _includes                  # theme includes
-├── _layouts                   # theme layouts (see below for details)
-├── _posts                     # Project & Portfolio posts
-├── _sass                      # Sass partials 
-├── portfolio                  # Main page for "portfolio"
-├── assets
-|  ├── css                     # font-awesome and main css
-|  ├── fonts                   # Font-Awesome
-|  ├── favicon.ico             # Favicon
-|  └── img                     # Images used for "about" page
-├── _config.yml                # sample configuration
-└── index.md                   # Resume to show on "about" page
+1. Clone this repo and cd into the directory:
+
+  ```bash
+  git clone https://github.com/jamigibbs/phantom.git your-dir-name && cd your-dir-name
+  ```
+
+2. Run:
+
+  ```bash
+  gem install bundler
+  bundle install
+  bundle exec jekyll serve
+  ```
+
+  You may need to append your commands with `sudo` if you're getting a permissions error.
+
+  _Don't have Jekyll yet? [Get `er installed then!](http://jekyllrb.com/docs/installation/)_
+
+3. Visit in your browser at:
+
+  `http://127.0.0.1:4000`
+
+## Launching with Github Pages :rocket:
+
+Jekyll + Github pages is a marriage made in heaven. You can [use your own custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/) or use the default Github url (ie. http://username.github.io/repository) and not bother messing around with DNS settings.
+
+## Theme Features
+
+### Navigation
+
+Navigation can be customized in `_config.yml` under the `nav_item` key. Default settings:
+
+```yaml
+nav_item:
+    - { url: '/', text: 'Home' }
+    - { url: '/about', text: 'About' }
 ```
 
-## Configure AP
-Open _config.yml in a text editor to change most of the blog's settings.
+Set the `nav_enable` variable to false in `_config.yml` to disable navigation.
 
+### Contact Form
 
-### Site Configuration
-Configure Jekyll as your own blog or with a subpath in in _config.yml:  
-```yml
-title: [Website Title]
-baseurl: [Website Subpath]
-url: [Github Page Url]
-google_analytics: [Google Analytics Tracking ID]
-```
-Please configure this before using the theme.  
-And to enable Google Analytics, add your [Traking ID](https://support.google.com/analytics/answer/1008080?visit_id=1-636579797402349951-2693679291&rd=1)
+You can display a contact form within the modal window template. This template is already setup to use the [Formspree](https://formspree.io) email system. You'll just want to add your email address to the form in `/_includes/contact-modal.html`.
 
+Place the modal window template in any place you'd like the user to click for the contact form.
+The template will display a link to click for the contact form modal window:
 
-
-### About You
-Meta variables hold basic information about your profile and resume.  
-Change these variables in _config.yml:  
-```yml
-author:
-  name: [Your Name]
-  desc: [Short introduction]
-  email: [Your E-Mail Address]
-  selfie: [Your Avatar]
-```
-Please configure this before using the theme.
-
-
-
-### SNS Information
-Your SNS information to display at the bottom of the page.  
-All values except "email" are text values.  
-```yml
-social:
-  email: true
-  behance:
-  bitbucket:
-  dribbble:
-  facebook:
-  flickr:
-  github: 
-  google_plus:
-  instagram:
-  keybase:
-  linkedin:
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:
-  steam:
-  tumblr:
-  gitlab:
-  twitter: 
-  vimeo:
-  wordpress:
-  youtube:
-  default_txt: "Follow On"
+```liquid
+{% include contact.html %}
+{% include contact-modal.html %}
 ```
 
+### Animation Effects
 
-## Portfolio Schema
-```markdown
----
-layout: post
-title:  [Project title to show in portfolio list]
-info: [A brief introduction to show in portfolio list]
-tech: [The technologies used in the project to show in portfolio list]
-type: [Property of the project to be displayed in front of the project's info(toy or company name)]
----
+Animations with CSS classes are baked into the theme. To animate a section or element, simply add the animation classes:
+
+```html
+<div id="about-me" class="wow fadeIn">
+  I'm the coolest!
+</div>
 ```
 
-## Other formats
-It uses the markdown syntax by default, and there is no format other than the one mentioned above.  
-You can use it as you like.  
+For a complete list of animations, see the [animation list](http://daneden.github.io/animate.css/).
 
+### Pagination
 
-## License
-[The MIT License (MIT)](https://raw.githubusercontent.com/kssim/ap/master/LICENSE)
+By default, pagination on the home page will activate after 10 posts. You can change this within `_config.yml`. You can add the pagination to other layouts with:
+
+```liquid
+  {% for post in paginator.posts %}
+    {% include post-content.html %}
+  {% endfor %}
+
+  {% include pagination.html %}
+```
+
+Read more about the [pagination plugin](http://jekyllrb.com/docs/pagination/).
+
+## Credit
+
+* Bootstrap, http://getbootstrap.com/, (C) 2011 - 2016 Twitter, Inc., [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+* Wow, https://github.com/matthieua/WOW, (C) 2014 - 2016 Matthieu Aussaguel
+, [GPL](https://github.com/matthieua/WOW#open-source-license)
+
+* Animate.css, https://github.com/daneden/animate.css, (C) 2016 Daniel Eden, [MIT](https://github.com/daneden/animate.css/blob/master/LICENSE)
