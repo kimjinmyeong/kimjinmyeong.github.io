@@ -1,27 +1,62 @@
-title: Study Space
-description: > # this means to ignore newlines until "baseurl:"
- Male<br/>
- 99.04.19<br/>
- majoring in software at Kookmin University in Seoul<br/>
- ISFJ
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kimjinmyeong.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# Site settings
+title: A.P
+baseurl: "/ap"
+url: "https://kssim.github.io"
+google_analytics: # Tracking ID, e.g. "UA-000000-01"
 
-
+# Author
 author:
-  name: 'JinMyeong'
-  last_name: 'Kim'
-  cv: ''
-  avatar: '/images/avatar.jpeg'
-  github_username: kimjinmyeong
-  email: kjmdkdlel@gmail.com
-  vk_id: 
-  telegram_name: 
-  logo: '/images/logo.svg'
+  name: KyeongSeob Sim
+  desc: Hello nice to meet you
+  email: ksub0912@gmail.com
+  selfie: assets/img/profile.jpg
+
+# social
+social:
+  email: true
+  behance:
+  bitbucket:
+  dribbble:
+  facebook: Test
+  flickr:
+  github: kssim
+  google_plus:
+  instagram:
+  keybase:
+  linkedin: https://www.linkedin.com/in/kssim/ 
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:
+  steam:
+  tumblr:
+  gitlab:
+  twitter: Test
+  vimeo:
+  wordpress:
+  youtube:
+  default_txt: "Follow On"
 
 # Build settings
 markdown: kramdown
 
-permalink: /:categories/:year/:title.html
+# Assets
+sass:
+  sass_dir: _sass
+  style: compressed
 
-timezone: Asia/Seoul
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Permalinks
+permalink: /:year-:month-:day/:title
+paginate_path: "/portfolio/page:num/"
+paginate: 5
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "*.gem"
+  - "LICENSE"
+  - "READE.md"
+  - "screenshot.png"

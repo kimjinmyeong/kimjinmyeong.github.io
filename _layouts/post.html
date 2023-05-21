@@ -1,39 +1,22 @@
 ---
-layout: default
+layout: base 
 ---
-<article class="post">
-  <header> 
-    <div class="title">
-      <h2>{{ page.title | escape }}</h2>
-      <p><a href="//github.com/kimjinmyeong/kimjinmyeong.github.io/edit/main/{{ page.path }}" class="icon"><i class="fas fa-fw fa-edit"></i> Edit on GitHub</a></p>
-    </div>
-    <div class="meta">
-      <time class="published" datetime="{{ page.date }}">{{ page.date | date: "%d %b %Y %R" }}</time>
-      <a href="{{ site.author.cv }}" class="author"><span class="name">{{site.author.name}}_{{ site.author.last_name }}</span><img src="{{ site.author.avatar | prepend: site.baseurl }}" alt="kimjinmyeong" /></a>
-    </div>
-  </header>
+
+<div class="post">
+  <h2 class="post-title">{{ page.title }}</h2>
+  <div class="post-line"></div>
+
   {{ content }}
-  
-  <p><a href="https://github.com/kimjinmyeong?tab=repositories">My Github</a>
-  <footer>
-    <ul class="stats">
-      <li><a class="icon" href="{{ site.url }}"><i class="fas fa-fw fa-folder"></i> Home</a></li>
-      <li><a href="//github.com/kimjinmyeong/kimjinmyeong.github.io/edit/main/{{ page.path }}" class="icon"><i class="fas fa-fw fa-edit"></i> Edit</a></li>
-    </ul>
-  </footer>
-  
+
 </div>
-</article>
-<ul class="actions pagination">
-  {% if page.previous.url %}
-    <li><a href="{{page.previous.url}}" class="button big previous icon"><i class="fw fas fa-chevron-left"></i> previous </a></li>
-  {% endif %}
+
+<div class="pagination">
   {% if page.next.url %}
-    <li><a href="{{page.next.url}}" class="button big next icon"> next <i class="fw fas fa-chevron-right"></i></a></li>
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left next">Prev</a>
   {% endif %}
-</ul>
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right next">Next</a>
+  {% endif %}
 
-
-{%include comments.html %}
-
-
+  <a href="#" class="top">Top</a>
+</div>
