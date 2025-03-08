@@ -13,7 +13,7 @@ title                    : "Bezzang Dev"
 title_separator          : "-"
 name                     : &name "Jinmyeong Kim"
 description              : &description "Backend Developer"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://bezzang-dev.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bezzang-dev/bezzang-dev.github.io"
 
@@ -213,18 +213,18 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
+  Computer Science:
     output: true
     permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+  # publications:
+  #   output: true
+  #   permalink: /:collection/:path/
+  # portfolio:
+  #   output: true
+  #   permalink: /:collection/:path/
+  # talks:
+  #   output: true
+  #   permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
